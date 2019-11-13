@@ -1,0 +1,4 @@
+{
+  "python.autoComplete.extraPaths": ["D:/Programming/Projects/django_project"],
+  "python.linting.pylintArgs" : [ "--load-plugins=pylint_django"]
+}

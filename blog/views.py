@@ -1,23 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Post
 
-posts = [
-  {
-    'author': 'phuclhv',
-    'title': 'First post',
-    'date_posted': 'Some content',
-    'date_posted': 'Nov 11, 2019'
-  },
-  {
-    'author': 'Jeff Dean',
-    'title': 'Second post',
-    'date_posted': 'Another content',
-    'date_posted': 'Nov 12, 2019'
-  }
-]
 def home(request):
   context = {
-    'posts': posts,
+    'posts': Post.objects.all(),
     'name': 'Home',
   } 
   # pass information to template

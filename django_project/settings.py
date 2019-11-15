@@ -123,6 +123,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Directory where upload files will be saved
+MEDIA_URL = '/media/'  # url that we're going to access the pictures
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4' # make Crispy to use bootstrap4
 
 LOGIN_REDIRECT_URL = 'blog-home' # Make after the login, it redirects to blog homepage

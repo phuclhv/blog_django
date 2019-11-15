@@ -11,6 +11,6 @@
 </p>
 
 <p align="center">
-Simple blog made by Django as a part of my Django learning process. Comments are added to explain learning points. 
+Full-featured blog site made by Django as a part of my Django learning process. Comments are added to explain learning points. 
 </p>
 

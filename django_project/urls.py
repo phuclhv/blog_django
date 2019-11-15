@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 # import those to include the urls file of other applications
+from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from users import views as user_views
 
@@ -23,7 +24,15 @@ urlpatterns = [
     # Since this is the highest level urls file of the page, we has to include all the urls file of the apps contained.
     # this line will map to urls.py file in folder blog
     path('', include('blog.urls')),
+    
     # Instead of creating the new urls file in the app using "include"
     # We can import directly to the project url
-    path('register/',user_views.register, name='register'),
+    path('register/',user_views.register, name='register') ,
+    path('profile/',user_views.profile, name='profile'),
+
+    # We need to define the template_name to overide the default one
+    path('login/',auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('logout/',auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    
+
 ]

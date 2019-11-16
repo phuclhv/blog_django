@@ -4,7 +4,7 @@ from .views import (
   PostDetailView,
   PostCreateView,
   PostUpdateView,
-  PostDeleteView
+  PostDeleteView,
 )
 # import . means that import from the current folder
 from . import views
